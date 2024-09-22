@@ -1,5 +1,25 @@
 #include "question1.h"
 
+bool is_palindrome(const std::string& str) {
+    int length = str.length();
+    for (int j = 0; j < length / 2; j++) {
+        if (str[j] != str[length - j - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int fibonacci(int n) {
+    if (n == 0) {
+        return 0;
+    } else if (n == 1) {
+        return 1;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
 bool test_config()
 {
     return true;
